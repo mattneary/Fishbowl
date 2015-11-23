@@ -3,6 +3,8 @@
 > Simple time tracking
 
 ```sh
-$ python fishbowl/fishbowl.py
+$ python -u fishbowl/fishbowl.py | \
+    xargs -n1 -I {} \
+    curl -d "{}" http://fishbowl-host.local/save
 ```
 
